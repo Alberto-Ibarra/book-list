@@ -1,0 +1,13 @@
+<form>
+    <input type="text" placeholder="Author" [(ngModel)]="author" name="author"/>
+    <input type="text" placeholder="Title" [(ngModel)]="title" name="title"/> 
+    <button (click)="handleClick()">Enter</button>
+</form>
+
+
+<ul>
+    <li *ngFor="let book of bookService.bookList">
+        <span>Title: {{book.title}}</span><br/>
+        <span>Author: {{book.author}}</span>
+    </li>
+</ul>
